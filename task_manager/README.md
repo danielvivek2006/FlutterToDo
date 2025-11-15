@@ -91,7 +91,23 @@ The primary color used throughout the application is a custom purple (`#D8C3FA`)
 
 ## Screenshots
 
-*(Add screenshots of the application here)*
+### iOS Screenshots
+
+![iOS Screenshot 1](lib/screenshots/ios/IMG_5433.PNG)
+![iOS Screenshot 2](lib/screenshots/ios/IMG_5434.PNG)
+![iOS Screenshot 3](lib/screenshots/ios/IMG_5435.PNG)
+![iOS Screenshot 4](lib/screenshots/ios/IMG_5436.PNG)
+![iOS Screenshot 5](lib/screenshots/ios/IMG_5437.PNG)
+![iOS Screenshot 6](lib/screenshots/ios/IMG_5438.PNG)
+![iOS Screenshot 7](lib/screenshots/ios/IMG_5439.PNG)
+![iOS Screenshot 8](lib/screenshots/ios/IMG_5440.PNG)
+![iOS Screenshot 9](lib/screenshots/ios/IMG_5441.PNG)
+![iOS Screenshot 10](lib/screenshots/ios/IMG_5442.PNG)
+![iOS Screenshot 11](lib/screenshots/ios/IMG_5443.PNG)
+![iOS Screenshot 12](lib/screenshots/ios/IMG_5444.PNG)
+![iOS Screenshot 13](lib/screenshots/ios/IMG_5445.PNG)
+![iOS Screenshot 14](lib/screenshots/ios/IMG_5446.PNG)
+![iOS Screenshot 15](lib/screenshots/ios/IMG_5447.PNG)
 
 ## Contributing
 
