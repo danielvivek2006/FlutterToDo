@@ -6,19 +6,12 @@ import 'theme/theme_manager.dart';
 import 'theme/app_themes.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/main_screen.dart';
+import 'dart:developer' as developer;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Set system UI overlay
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark,
-      systemNavigationBarColor: Colors.transparent,
-    ),
-  );
-  
+  developer.log('Initializing Parse...');
   // Initialize Back4App
   const keyApplicationId = 'xJFeVxlx0DxFr7BLkqfyXAKFNFQTWitmMi9aIl0g';
   const keyClientKey = 'rg3vm7FKDgXzZarOMfMKiNx5qQIzNjYnxfaW1MVP';
@@ -28,13 +21,21 @@ void main() async {
     keyApplicationId,
     keyParseServerUrl,
     clientKey: keyClientKey,
-    debug: true,
     autoSendSessionId: true,
   );
+  developer.log('Parse initialized.');
+
+  developer.log('Loading theme...');
+  final themeManager = ThemeManager();
+  await themeManager.loadThemeMode();
+  developer.log('Theme loaded.');
+
+  // Diagnostic delay
+  await Future.delayed(const Duration(seconds: 3));
 
   runApp(
     ChangeNotifierProvider(
-      create: (_) => ThemeManager(),
+      create: (_) => themeManager,
       child: const MyApp(),
     ),
   );
@@ -60,19 +61,45 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class AuthChecker extends StatelessWidget {
+class AuthChecker extends StatefulWidget {
   const AuthChecker({Key? key}) : super(key: key);
 
+  @override
+  _AuthCheckerState createState() => _AuthCheckerState();
+}
+
+class _AuthCheckerState extends State<AuthChecker> {
+  Future<ParseUser?>? _currentUserFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    developer.log('AuthChecker: initState');
+    _currentUserFuture = _getCurrentUser();
+  }
+
   Future<ParseUser?> _getCurrentUser() async {
-    return await ParseUser.currentUser().then((value) => value as ParseUser?);
+    developer.log('AuthChecker: _getCurrentUser');
+    try {
+      final user = await ParseUser.currentUser().then((value) => value as ParseUser?);
+      developer.log('AuthChecker: _getCurrentUser success');
+      return user;
+    } catch (e) {
+      // Handle errors, e.g., by logging them or showing an error message.
+      developer.log('Error getting current user: $e');
+      return null;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    developer.log('AuthChecker: build');
     return FutureBuilder<ParseUser?>(
-      future: _getCurrentUser(),
+      future: _currentUserFuture,
       builder: (context, snapshot) {
+        developer.log('AuthChecker: FutureBuilder builder');
         if (snapshot.connectionState == ConnectionState.waiting) {
+          developer.log('AuthChecker: FutureBuilder waiting');
           return Scaffold(
             body: Center(
               child: CircularProgressIndicator(
@@ -85,9 +112,11 @@ class AuthChecker extends StatelessWidget {
         }
         
         if (snapshot.hasData && snapshot.data != null) {
+          developer.log('AuthChecker: FutureBuilder hasData');
           return const MainScreen();
         }
         
+        developer.log('AuthChecker: FutureBuilder noData');
         return const LoginScreen();
       },
     );

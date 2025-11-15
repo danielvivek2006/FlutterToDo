@@ -121,7 +121,27 @@ The primary color used throughout the application is a custom purple (`#D8C3FA`)
 
 ### Android Screenshots
 
-*(Add Android screenshots here)*
+<p align="center">
+  <img src="lib/screenshots/android/Screenshot_20251115_144907.png" width="30%" alt="Android Screenshot 1">
+  <img src="lib/screenshots/android/Screenshot_20251115_144928.png" width="30%" alt="Android Screenshot 2">
+  <img src="lib/screenshots/android/Screenshot_20251115_144951.png" width="30%" alt="Android Screenshot 3">
+</p>
+<p align="center">
+  <img src="lib/screenshots/android/Screenshot_20251115_144958.png" width="30%" alt="Android Screenshot 4">
+  <img src="lib/screenshots/android/Screenshot_20251115_145003.png" width="30%" alt="Android Screenshot 5">
+  <img src="lib/screenshots/android/Screenshot_20251115_145014.png" width="30%" alt="Android Screenshot 6">
+</p>
+<p align="center">
+  <img src="lib/screenshots/android/Screenshot_20251115_145022.png" width="30%" alt="Android Screenshot 7">
+  <img src="lib/screenshots/android/Screenshot_20251115_145028.png" width="30%" alt="Android Screenshot 8">
+  <img src="lib/screenshots/android/Screenshot_20251115_145040.png" width="30%" alt="Android Screenshot 9">
+</p>
+<p align="center">
+  <img src="lib/screenshots/android/Screenshot_20251115_145051.png" width="30%" alt="Android Screenshot 10">
+  <img src="lib/screenshots/android/Screenshot_20251115_145100.png" width="30%" alt="Android Screenshot 11">
+  <img src="lib/screenshots/android/Screenshot_20251115_145107.png" width="30%" alt="Android Screenshot 12">
+  <img src="lib/screenshots/android/Screenshot_20251115_145116.png" width="30%" alt="Android Screenshot 13">
+</p>
 
 ## Contributing
 

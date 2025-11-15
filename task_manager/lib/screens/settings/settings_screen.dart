@@ -26,11 +26,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     if (response?.success ?? false) {
       if (!mounted) return;
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (_) => const LoginScreen()),
+      // Navigate to LoginScreen and clear all previous routes
+      Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
         (Route<dynamic> route) => false,
       );
+      // Optionally, you might want to reset the entire app state or trigger a full rebuild
+      // For now, relying on AuthChecker to re-evaluate on LoginScreen load
     } else {
       _showError(response?.error?.message ?? 'Logout failed');
     }

@@ -5,7 +5,7 @@ class ThemeManager extends ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.system;
 
   ThemeManager() {
-    _loadThemeMode();
+    loadThemeMode();
   }
 
   ThemeMode getThemeMode() => _themeMode;
@@ -18,7 +18,7 @@ class ThemeManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> _loadThemeMode() async {
+  Future<void> loadThemeMode() async {
     final prefs = await SharedPreferences.getInstance();
     final isDark = prefs.getBool('isDarkTheme') ?? false;
     _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
