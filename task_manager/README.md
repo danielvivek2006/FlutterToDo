@@ -93,21 +93,35 @@ The primary color used throughout the application is a custom purple (`#D8C3FA`)
 
 ### iOS Screenshots
 
-![iOS Screenshot 1](lib/screenshots/ios/IMG_5433.PNG)
-![iOS Screenshot 2](lib/screenshots/ios/IMG_5434.PNG)
-![iOS Screenshot 3](lib/screenshots/ios/IMG_5435.PNG)
-![iOS Screenshot 4](lib/screenshots/ios/IMG_5436.PNG)
-![iOS Screenshot 5](lib/screenshots/ios/IMG_5437.PNG)
-![iOS Screenshot 6](lib/screenshots/ios/IMG_5438.PNG)
-![iOS Screenshot 7](lib/screenshots/ios/IMG_5439.PNG)
-![iOS Screenshot 8](lib/screenshots/ios/IMG_5440.PNG)
-![iOS Screenshot 9](lib/screenshots/ios/IMG_5441.PNG)
-![iOS Screenshot 10](lib/screenshots/ios/IMG_5442.PNG)
-![iOS Screenshot 11](lib/screenshots/ios/IMG_5443.PNG)
-![iOS Screenshot 12](lib/screenshots/ios/IMG_5444.PNG)
-![iOS Screenshot 13](lib/screenshots/ios/IMG_5445.PNG)
-![iOS Screenshot 14](lib/screenshots/ios/IMG_5446.PNG)
-![iOS Screenshot 15](lib/screenshots/ios/IMG_5447.PNG)
+<p align="center">
+  <img src="lib/screenshots/ios/IMG_5433.PNG" width="30%" alt="iOS Screenshot 1">
+  <img src="lib/screenshots/ios/IMG_5434.PNG" width="30%" alt="iOS Screenshot 2">
+  <img src="lib/screenshots/ios/IMG_5435.PNG" width="30%" alt="iOS Screenshot 3">
+</p>
+<p align="center">
+  <img src="lib/screenshots/ios/IMG_5436.PNG" width="30%" alt="iOS Screenshot 4">
+  <img src="lib/screenshots/ios/IMG_5437.PNG" width="30%" alt="iOS Screenshot 5">
+  <img src="lib/screenshots/ios/IMG_5438.PNG" width="30%" alt="iOS Screenshot 6">
+</p>
+<p align="center">
+  <img src="lib/screenshots/ios/IMG_5439.PNG" width="30%" alt="iOS Screenshot 7">
+  <img src="lib/screenshots/ios/IMG_5440.PNG" width="30%" alt="iOS Screenshot 8">
+  <img src="lib/screenshots/ios/IMG_5441.PNG" width="30%" alt="iOS Screenshot 9">
+</p>
+<p align="center">
+  <img src="lib/screenshots/ios/IMG_5442.PNG" width="30%" alt="iOS Screenshot 10">
+  <img src="lib/screenshots/ios/IMG_5443.PNG" width="30%" alt="iOS Screenshot 11">
+  <img src="lib/screenshots/ios/IMG_5444.PNG" width="30%" alt="iOS Screenshot 12">
+</p>
+<p align="center">
+  <img src="lib/screenshots/ios/IMG_5445.PNG" width="30%" alt="iOS Screenshot 13">
+  <img src="lib/screenshots/ios/IMG_5446.PNG" width="30%" alt="iOS Screenshot 14">
+  <img src="lib/screenshots/ios/IMG_5447.PNG" width="30%" alt="iOS Screenshot 15">
+</p>
+
+### Android Screenshots
+
+*(Add Android screenshots here)*
 
 ## Contributing
 
