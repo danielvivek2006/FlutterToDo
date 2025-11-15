@@ -20,7 +20,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   Future<void> _logout() async {
     setState(() => _isLoading = true);
-    final response = await ParseUser.currentUser().then((user) => user?.logout());
+    final user = await ParseUser.currentUser();
+    final response = await user?.logout();
     setState(() => _isLoading = false);
 
     if (response?.success ?? false) {

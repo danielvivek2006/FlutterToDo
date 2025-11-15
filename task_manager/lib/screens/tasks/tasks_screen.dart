@@ -43,33 +43,25 @@ class _TasksScreenState extends State<TasksScreen> {
   }
 
   Future<void> _toggleTaskCompletion(TaskModel task) async {
+    setState(() {
+      task.isCompleted = !(task.isCompleted ?? false);
+    });
     final getTaskResponse = await TaskModel().getObject(task.objectId!);
     if (getTaskResponse.success) {
       final taskToUpdate = getTaskResponse.result as TaskModel;
       taskToUpdate.isCompleted = !(taskToUpdate.isCompleted ?? false);
-      final response = await taskToUpdate.save();
-      if (response.success) {
-        _fetchTasks();
-      } else {
-        _showError(response.error?.message ?? 'Failed to update task');
-      }
+      await taskToUpdate.save();
     } else {
       _showError(getTaskResponse.error?.message ?? 'Failed to get task for updating');
     }
   }
 
   Future<void> _deleteTask(TaskModel task) async {
-    final getTaskResponse = await TaskModel().getObject(task.objectId!);
-    if (getTaskResponse.success) {
-      final taskToDelete = getTaskResponse.result as TaskModel;
-      final response = await taskToDelete.delete();
-      if (response.success) {
-        _fetchTasks();
-      } else {
-        _showError(response.error?.message ?? 'Failed to delete task');
-      }
+    final response = await task.delete();
+    if (response.success) {
+      _fetchTasks();
     } else {
-      _showError(getTaskResponse.error?.message ?? 'Failed to get task for deletion');
+      _showError(response.error?.message ?? 'Failed to delete task');
     }
   }
 
@@ -120,7 +112,7 @@ class _TasksScreenState extends State<TasksScreen> {
                 context,
                 MaterialPageRoute(builder: (_) => const TaskDetailScreen()),
               );
-              if (result != null) {
+              if (result == true) {
                 _fetchTasks();
               }
             },
@@ -184,7 +176,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                 builder: (_) => TaskDetailScreen(task: task),
                               ),
                             );
-                            if (result != null) {
+                            if (result == true) {
                               _fetchTasks();
                             }
                           },

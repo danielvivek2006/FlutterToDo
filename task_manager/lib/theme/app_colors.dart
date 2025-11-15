@@ -36,9 +36,9 @@ class AppColors {
   // Primary Colors
   Color get primary {
     if (isIOS) {
-      return const Color(0xFF007AFF);
+      return const Color(0xFFD8C3FA);
     } else {
-      return isDark ? const Color(0xFFBB86FC) : const Color(0xFF6200EE);
+      return isDark ? const Color(0xFFD8C3FA) : const Color(0xFFD8C3FA);
     }
   }
   

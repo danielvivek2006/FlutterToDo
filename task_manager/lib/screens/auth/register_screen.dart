@@ -35,10 +35,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     setState(() => _isLoading = true);
 
-    final user = ParseUser(
+    final user = ParseUser.createUser(
       _emailController.text.trim(),
       _passwordController.text,
-      null,
+      _emailController.text.trim(),
     );
 
     try {

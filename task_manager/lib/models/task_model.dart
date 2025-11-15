@@ -1,10 +1,8 @@
-import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
+import 'package:parse_server_sdk/parse_server_sdk.dart';
 
 class TaskModel extends ParseObject implements ParseCloneable {
-  TaskModel() : super(_className);
+  TaskModel() : super('Task');
   TaskModel.clone() : this();
-
-  static const String _className = 'Task';
 
   @override
   TaskModel clone(Map<String, dynamic> map) => TaskModel.clone()..fromJson(map);

@@ -33,6 +33,7 @@ dependencies:
   
   # Backend
   parse_server_sdk_flutter: ^8.0.0
+  parse_server_sdk: ^6.4.0
   
   # State Management
   provider: ^6.1.1

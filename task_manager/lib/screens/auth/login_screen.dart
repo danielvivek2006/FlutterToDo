@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final user = ParseUser(
       _emailController.text.trim(),
       _passwordController.text,
-      _emailController.text.trim(),
+      null,
     );
 
     var response = await user.login();

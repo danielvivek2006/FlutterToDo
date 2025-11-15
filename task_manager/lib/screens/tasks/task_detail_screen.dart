@@ -62,7 +62,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
 
     if (response.success) {
       if (!mounted) return;
-      Navigator.pop(context);
+      Navigator.pop(context, true);
     } else {
       if (!mounted) return;
       _showError(response.error?.message ?? 'Failed to save task');
